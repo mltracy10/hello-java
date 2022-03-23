@@ -1,21 +1,23 @@
 # LaunchDarkly Sample Java Application 
 
-We've built a simple console application that demonstrates how LaunchDarkly's SDK works.
-
- Below, you'll find the basic build procedure, but for more comprehensive instructions, you can visit your [Quickstart page](https://app.launchdarkly.com/quickstart#/) or the [Java SDK reference guide](https://docs.launchdarkly.com/sdk/server-side/java).
+I leveraged the LaunchDarkly Sample App for my technical assignment using Java -Merritt
 
 ## Build instructions 
 
-This project uses [Gradle](https://gradle.org/). It requires that Java is already installed on your system (version 8 or higher). It will automatically use the latest release of the LaunchDarkly SDK with major version 5.
+I used Atom, Github Desktop, and Gradle to edit/push/build.
 
-1. Edit `src/main/java/Hello.java` and set the value of `SDK_KEY` to your LaunchDarkly SDK key. If there is an existing boolean feature flag in your LaunchDarkly project that you want to evaluate, set `FEATURE_FLAG_KEY` to the flag key.
+1. Edit `src/main/java/Hello.java` and replace the value of `SDK_KEY` to your LaunchDarkly SDK key. The SDK of my test environment of my LaunchDarkly instance was what is in the code. Set the FEATURE_FLAG_KEY to "my-boolean-flag"
 
 ```java
   static final String SDK_KEY = "1234567890abcdef";
 
-  static final String FEATURE_FLAG_KEY = "my-flag";
+  static final String FEATURE_FLAG_KEY = "my-boolean-flag";
 ```
 
 2. On the command line, run `./gradlew run` (or, on Windows, `gradlew run`).
 
 You should see the message `"Feature flag '<flag key>' is <true/false> for this user"`.
+
+3. I edited the code to not only have Sandy added as a user, but also HarryPotter. This allowed me to do targeting based on User. I had to run the code a couple of times, once with Sandy and once with HarryPotter, to create both accounts.
+
+4. My feature flag is a boolean flag (my-boolean-flag) that, when on, states If Susan, show false; If HarryPotter, show true. You could also do the kill switch and turn off the feature flag.
