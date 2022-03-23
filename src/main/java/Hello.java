@@ -37,7 +37,7 @@ public class Hello {
                             .name("Sandy")
                             .build();
 
-    boolean flagValue = client.boolVariation(FEATURE_FLAG_KEY, user, false);
+    String flagValue = client.StringVariation(FEATURE_FLAG_KEY, user, false);
 
     showMessage("Feature flag '" + FEATURE_FLAG_KEY + "' is " + flagValue + " for this user");
 
