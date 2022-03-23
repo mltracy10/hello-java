@@ -34,7 +34,7 @@ public class Hello {
     // Set up the user properties. This user should appear on your LaunchDarkly users dashboard
     // soon after you run the demo.
     LDUser user = new LDUser.Builder("example-user-key")
-                            .name("Sandy")
+                            .name("HarryPotter")
                             .build();
 
     boolean flagValue = client.boolVariation(FEATURE_FLAG_KEY, user, false);
