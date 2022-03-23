@@ -6,7 +6,7 @@ import java.io.IOException;
 public class Hello {
 
   // Set SDK_KEY to your LaunchDarkly SDK key.
-  static final String SDK_KEY = "sdk-cd4e846a-7987-4187-a3ee-a99773b1e211";
+  static final String SDK_KEY = "REPLACE-ME";
 
   // Set FEATURE_FLAG_KEY to the feature flag key you want to evaluate.
   static final String FEATURE_FLAG_KEY = "my-boolean-flag";
@@ -33,8 +33,8 @@ public class Hello {
 
     // Set up the user properties. This user should appear on your LaunchDarkly users dashboard
     // soon after you run the demo.
-    LDUser user = new LDUser.Builder("example-user-key2")
-                            .name("HarryPotter")
+    LDUser user = new LDUser.Builder("example-user-key")
+                            .name("Sandy")
                             .build();
 
     boolean flagValue = client.boolVariation(FEATURE_FLAG_KEY, user, false);

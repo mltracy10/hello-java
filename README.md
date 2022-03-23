@@ -9,15 +9,23 @@ I used Atom, Github Desktop, and Gradle to edit/push/build.
 1. Edit `src/main/java/Hello.java` and replace the value of `SDK_KEY` to your LaunchDarkly SDK key. The SDK of my test environment of my LaunchDarkly instance was what is in the code. Set the FEATURE_FLAG_KEY to "my-boolean-flag"
 
 ```java
-  static final String SDK_KEY = "1234567890abcdef";
+  static final String SDK_KEY = "REPLACE-ME";
 
   static final String FEATURE_FLAG_KEY = "my-boolean-flag";
 ```
 
-2. On the command line, run `./gradlew run` (or, on Windows, `gradlew run`).
+2. Create a boolean feature flag and name it "my-boolean-flag". Enable the flag and save.
 
-You should see the message `"Feature flag '<flag key>' is <true/false> for this user"`.
+3. On the command line, run `./gradlew run` (or, on Windows, `gradlew run`).
 
-3. I edited the code to not only have Sandy added as a user, but also HarryPotter. This allowed me to do targeting based on User. I had to run the code a couple of times, once with Sandy and once with HarryPotter, to create both accounts.
+You should see the message `"Feature flag '<flag key>' is <true/false> for this user"`. It will also create a user called Sandy.
 
-4. My feature flag is a boolean flag (my-boolean-flag) that, when on, states If Susan, show false; If HarryPotter, show true. You could also do the kill switch and turn off the feature flag.
+4. Change the LDUser key on line 36 to "example-user-key2" and the user name from Sandy to HarryPotter.
+
+5. On the command line, run `./gradlew run` (or, on Windows, `gradlew run`).
+
+You should see the message `"Feature flag '<flag key>' is <true/false> for this user"`. It will also create a user called HarryPotter.
+
+4. Creating 2 users allowed me to do targeting based on User.
+
+5. Edit the boolean feature flag (my-boolean-flag) so that if HarryPotter it shows True, and if Susan, shows false. You could also do the kill switch and turn off the feature flag all together.
