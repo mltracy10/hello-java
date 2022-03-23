@@ -9,7 +9,7 @@ public class Hello {
   static final String SDK_KEY = "sdk-cd4e846a-7987-4187-a3ee-a99773b1e211";
 
   // Set FEATURE_FLAG_KEY to the feature flag key you want to evaluate.
-  static final String FEATURE_FLAG_KEY = "Number";
+  static final String FEATURE_FLAG_KEY = "my-boolean-flag";
 
   private static void showMessage(String s) {
     System.out.println("*** " + s);
