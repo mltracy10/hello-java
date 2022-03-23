@@ -6,18 +6,18 @@ import java.io.IOException;
 public class Hello {
 
   // Set SDK_KEY to your LaunchDarkly SDK key.
-  static final String SDK_KEY = "";
+  static final String SDK_KEY = "sdk-cd4e846a-7987-4187-a3ee-a99773b1e211";
 
   // Set FEATURE_FLAG_KEY to the feature flag key you want to evaluate.
   static final String FEATURE_FLAG_KEY = "my-boolean-flag";
-  
+
   private static void showMessage(String s) {
     System.out.println("*** " + s);
     System.out.println();
   }
 
   public static void main(String... args) throws IOException {
-    if (SDK_KEY.equals("")) {
+    if (SDK_KEY.equals("sdk-cd4e846a-7987-4187-a3ee-a99773b1e211")) {
       showMessage("Please edit Hello.java to set SDK_KEY to your LaunchDarkly SDK key first");
       System.exit(1);
     }
@@ -30,7 +30,7 @@ public class Hello {
       showMessage("SDK failed to initialize");
       System.exit(1);
     }
-    
+
     // Set up the user properties. This user should appear on your LaunchDarkly users dashboard
     // soon after you run the demo.
     LDUser user = new LDUser.Builder("example-user-key")
