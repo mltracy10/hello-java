@@ -17,7 +17,7 @@ public class Hello {
   }
 
   public static void main(String... args) throws IOException {
-    if (SDK_KEY.equals("sdk-cd4e846a-7987-4187-a3ee-a99773b1e211")) {
+    if (SDK_KEY.equals("")) {
       showMessage("Please edit Hello.java to set SDK_KEY to your LaunchDarkly SDK key first");
       System.exit(1);
     }
